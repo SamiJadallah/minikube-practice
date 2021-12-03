@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: private-reg
+spec:
+  containers:
+  - name: nginx-app
+    image: sjadallah11/nginx-app:1.1
+    imagePullPolicy: Always
+  imagePullSecrets:
+  - name: registry-creds
+
